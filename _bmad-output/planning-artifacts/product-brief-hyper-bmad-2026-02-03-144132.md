@@ -1,19 +1,22 @@
 ---
-stepsCompleted: [1, 2]
+stepsCompleted: [1, 2, 3, 4, 5, 6]
+status: complete
 inputDocuments: ['_bmad-output/brainstorming/brainstorming-session-2026-02-02-234457.md']
 date: 2026-02-03 14:41:32
 author: Pena
 ---
 
-# Product Brief: E-commerce API Demo
+# Product Brief: E-commerce API MVP
 
 ## Executive Summary
 
-Este projeto é um **E-commerce API MVP** desenvolvido em Python, que serve como repositório base para demonstração de técnicas de Hyper Coding em um curso para software houses focadas em backend. O objetivo é fornecer uma aplicação backend real, porém simples, que rode 100% localmente e permita demonstrar o ciclo completo de desenvolvimento com IA usando o método BMAD (Business Modeling and Agile Development).
+API REST simples de e-commerce desenvolvida em Python. Permite gerenciar produtos e carrinho de compras. MVP focado em funcionalidades essenciais sem complexidade desnecessária.
 
-A aplicação implementa funcionalidades essenciais de e-commerce: gerenciamento de produtos (criar, editar, listar) e carrinho de compras (adicionar, remover, visualizar itens). O escopo é intencionalmente limitado para manter a complexidade adequada a um contexto educacional, eliminando componentes como autenticação, pagamento e categorias.
+**Funcionalidades:**
+- Produtos: criar, editar, listar
+- Carrinho: adicionar item, remover item, visualizar
 
-**Valor Principal:** Fornecer uma base de código realista e funcional que permite aos alunos aprenderem técnicas de desenvolvimento com IA em um contexto prático e relevante para software houses backend.
+**Stack:** Python + SQLite
 
 ---
 
@@ -21,74 +24,69 @@ A aplicação implementa funcionalidades essenciais de e-commerce: gerenciamento
 
 ### Problem Statement
 
-Desenvolvedores de software houses backend precisam aprender técnicas modernas de desenvolvimento com IA (Hyper Coding), mas frequentemente carecem de exemplos práticos que sejam:
-- Realistas o suficiente para representar projetos reais
-- Simples o suficiente para serem compreendidos em contexto educacional
-- Executáveis localmente sem dependências complexas
-- Focados em backend, sua área de especialização
-
-### Problem Impact
-
-Sem um repositório exemplo adequado, cursos de Hyper Coding enfrentam:
-- **Demonstrações artificiais:** Exemplos triviais (to-do lists) que não refletem complexidade real
-- **Setup complicado:** Projetos realistas que requerem infraestrutura externa (APIs, cloud services)
-- **Desconexão com a realidade:** Exemplos que não ressoam com trabalho diário de backend developers
-- **Dificuldade de replicação:** Alunos não conseguem baixar e rodar imediatamente
-
-### Why Existing Solutions Fall Short
-
-Repositórios exemplo atuais geralmente são:
-- **Muito simples:** To-do lists e calculadoras não demonstram regras de negócio reais
-- **Muito complexos:** E-commerces completos com pagamentos, auth complexa, microserviços
-- **Dependências externas:** Requerem APIs pagas, serviços cloud, configuração elaborada
-- **Mal documentados:** Não explicam o processo de desenvolvimento, apenas o código final
+Necessidade de uma API de e-commerce simples para gerenciar catálogo de produtos e carrinho de compras, sem a complexidade de sistemas completos de pagamento ou autenticação.
 
 ### Proposed Solution
 
-Um **E-commerce API MVP** em Python que:
+Um **E-commerce API MVP** em Python com:
 
 **Funcionalidades Core:**
-- **Produtos:** CRUD completo (criar, editar, listar produtos)
-- **Carrinho:** Gerenciamento de sessão anônima (adicionar/remover items, visualizar)
-- **Dados:** SQLite local (zero configuração)
+- **Produtos:** CRUD (criar, editar, listar)
+- **Carrinho:** Sessão anônima (adicionar/remover items, visualizar)
+- **Dados:** SQLite local
 
 **Características Técnicas:**
 - Backend REST API em Python
-- Validações simples mas realistas
-- CRUD básico com regras de negócio claras
+- Validações simples
 - Sem autenticação (sessão anônima)
-- Sem categorias (escopo reduzido)
+- Sem categorias
 - Sem pagamento (termina no carrinho)
-
-**Características Pedagógicas:**
-- Setup em minutos (git clone + pip install)
 - Roda 100% localmente
-- Complexidade média (nem trivial, nem enterprise)
-- Domínio familiar (e-commerce)
-- Código limpo e bem estruturado
 
-### Key Differentiators
+---
 
-1. **Equilíbrio Perfeito de Complexidade:**
-   - Não é um "hello world", mas também não é um sistema enterprise
-   - Regras de negócio suficientes para demonstrar IA, sem sobrecarga
+## Target Users
 
-2. **Zero Dependências Externas:**
-   - Roda completamente local
-   - Alunos baixam e executam em minutos
-   - SQLite embarcado
+### Administrador
+- Gerencia catálogo de produtos (criar, editar, listar)
 
-3. **Foco Educacional Explícito:**
-   - Escopo deliberadamente limitado
-   - Cada funcionalidade escolhida para demonstrar técnica específica
-   - Documentação do processo, não apenas do código
+### Cliente
+- Visualiza produtos disponíveis
+- Gerencia carrinho de compras (adicionar/remover items)
 
-4. **Backend-First:**
-   - 100% foco em backend
-   - API REST pura
-   - Relevante para software houses backend
+---
 
-5. **BMAD-Ready:**
-   - Estruturado para demonstrar ciclo completo
-   - Do brief à implementação
-   - Mostra valor de planejamento com IA
+## Success Metrics
+
+### Métricas Funcionais
+
+- API responde corretamente em todos os endpoints
+- CRUD de produtos funciona (criar, editar, listar)
+- Carrinho funciona (adicionar, remover, visualizar)
+- Dados persistem corretamente no SQLite
+- Validações simples funcionam como esperado
+
+---
+
+## MVP Scope
+
+### Core Features
+
+**Produtos:**
+- Criar produto (nome, descrição, preço)
+- Editar produto
+- Listar produtos
+
+**Carrinho:**
+- Adicionar item ao carrinho
+- Remover item do carrinho
+- Visualizar carrinho (com total)
+
+### Out of Scope
+
+- Autenticação/usuários
+- Categorias de produtos
+- Checkout/pagamento
+- Busca/filtros avançados
+- Upload de imagens
+- Pedidos/histórico
