@@ -1,6 +1,6 @@
 # Story 1.1: Project Setup and API Foundation
 
-Status: ready-for-dev
+Status: review
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -20,16 +20,16 @@ so that I can implement features on a solid base.
 
 ## Tasks / Subtasks
 
-- [ ] Task 1: Create project structure and dependencies (AC: 1, 2)
-  - [ ] 1.1 Create `requirements.txt` with fastapi, uvicorn, sqlalchemy (no versions pinned unless architecture specifies)
-  - [ ] 1.2 Create folders: `app/`, `app/api/`, `app/services/`, `app/models/`, `app/schemas/`, `app/utils/`, `tests/`
-  - [ ] 1.3 Add `__init__.py` in each package folder so they are Python packages
-- [ ] Task 2: Implement FastAPI app entry point (AC: 1, 3)
-  - [ ] 2.1 Create `app/main.py` that instantiates FastAPI (e.g. `app = FastAPI()`)
-  - [ ] 2.2 Ensure running `uvicorn app.main:app --reload` starts the server and `/docs` serves Swagger UI
-- [ ] Task 3: Verify runnability and structure (AC: 1, 2, 3)
-  - [ ] 3.1 Run the app and confirm `/docs` returns Swagger UI
-  - [ ] 3.2 Confirm all required folders and `__init__.py` files exist
+- [x] Task 1: Create project structure and dependencies (AC: 1, 2)
+  - [x] 1.1 Create `requirements.txt` with fastapi, uvicorn, sqlalchemy (no versions pinned unless architecture specifies)
+  - [x] 1.2 Create folders: `app/`, `app/api/`, `app/services/`, `app/models/`, `app/schemas/`, `app/utils/`, `tests/`
+  - [x] 1.3 Add `__init__.py` in each package folder so they are Python packages
+- [x] Task 2: Implement FastAPI app entry point (AC: 1, 3)
+  - [x] 2.1 Create `app/main.py` that instantiates FastAPI (e.g. `app = FastAPI()`)
+  - [x] 2.2 Ensure running `uvicorn app.main:app --reload` starts the server and `/docs` serves Swagger UI
+- [x] Task 3: Verify runnability and structure (AC: 1, 2, 3)
+  - [x] 3.1 Run the app and confirm `/docs` returns Swagger UI
+  - [x] 3.2 Confirm all required folders and `__init__.py` files exist
 
 ## Dev Notes
 
@@ -59,4 +59,20 @@ so that I can implement features on a solid base.
 
 ### Completion Notes List
 
+- requirements.txt criado com fastapi, uvicorn, sqlalchemy, pytest, httpx.
+- Estrutura de pastas: app/, app/api/, app/services/, app/models/, app/schemas/, app/utils/, tests/ com __init__.py em cada uma.
+- app/main.py: FastAPI app instanciado; uvicorn app.main:app --reload inicia servidor; /docs retorna Swagger UI (verificado com HTTP 200).
+- Testes em tests/test_app_main.py: test_app_exists, test_docs_available, test_openapi_json_available; 3 passed.
+
 ### File List
+
+- requirements.txt
+- app/__init__.py
+- app/main.py
+- app/api/__init__.py
+- app/services/__init__.py
+- app/models/__init__.py
+- app/schemas/__init__.py
+- app/utils/__init__.py
+- tests/__init__.py
+- tests/test_app_main.py

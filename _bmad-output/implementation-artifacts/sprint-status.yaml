@@ -42,7 +42,7 @@ story_location: d:\Code\hyper-bmad\_bmad-output\implementation-artifacts
 development_status:
   # Epic 1: Catálogo de Produtos
   epic-1: in-progress
-  1-1-project-setup-and-api-foundation: ready-for-dev
+  1-1-project-setup-and-api-foundation: review
   1-2-product-model-and-database: backlog
   1-3-create-product: backlog
   1-4-list-products: backlog
